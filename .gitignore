@@ -1,2 +1,4 @@
 myenv
-*.csv
+Fake.csv
+True.csv
+combined_data.csv
