@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Fake News Detection</h1>
+        <p>Empowering the truth with Machine Learning</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('connect') }}">Connect</a></li>
+            <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Prediction Section -->
+    <section id="predict">
+        <h2>Classify News Article</h2>
+        <form method="POST" action="/predict">
+            <textarea name="news_article" rows="6" placeholder="Paste the news article here..."></textarea>
+            <div class="button-container">
+                <button type="submit">Classify News</button>
+            </div>
+        </form>
+        
+        {% if prediction %}
+            <div id="result">
+                <h3>Prediction: {{ prediction }}</h3>
+            </div>
+        {% endif %}
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center;">
+        <p>© 2024 Fake News Detection | All Rights Reserved</p>
+        <p>Designed with <span style="color: #ff6347;">&#10084;</span> for truth.</p>
+    </footer>
+
+    <!-- JavaScript for Animations -->
+    <script src="{{ url_for('static', filename='animations.js') }}"></script>
+</body>
+
+</html>
