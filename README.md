@@ -14,7 +14,6 @@ An interactive Fake News Detection web app that classifies news headlines or art
 - [Dataset](#dataset)
 - [How It Works](#how-it-works)
 - [Web App UI](#web-app-ui)
-- [Installation](#installation)
 - [Results](#results)
 - [Future Scope](#future-scope)
 - [Credits](#credits)
